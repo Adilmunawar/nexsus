@@ -230,9 +230,7 @@ const AdvancedHero = () => {
           <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-2000 delay-1100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
             <div className="flex flex-col items-center space-y-2 animate-bounce">
               
-              <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-                <div className="w-1 h-3 bg-blue-400 rounded-full mt-2 animate-ping"></div>
-              </div>
+              
               <ArrowDown className="w-5 h-5 text-gray-400" />
             </div>
           </div>
