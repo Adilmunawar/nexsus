@@ -166,28 +166,7 @@ const AdvancedHero = () => {
 
           {/* Advanced CTA Buttons */}
           <div className={`transition-all duration-2000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <button className="group relative px-12 py-6 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 rounded-2xl font-bold text-xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/50 border border-white/10">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></div>
-                <div className="relative flex items-center justify-center space-x-3">
-                  <Globe className="w-6 h-6 group-hover:rotate-180 transition-transform duration-700" />
-                  <span>Explore Universe</span>
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full animate-ping"></div>
-                </div>
-              </button>
-              
-              <button className="group relative px-12 py-6 border-2 border-gray-500/50 rounded-2xl font-bold text-xl overflow-hidden backdrop-blur-md bg-white/5 hover:bg-white/10 transition-all duration-500 hover:scale-110 hover:border-blue-400 hover:shadow-2xl hover:shadow-purple-500/30">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative flex items-center justify-center space-x-3">
-                  <div className="relative">
-                    <Play className="w-6 h-6 group-hover:scale-125 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-blue-400 rounded-full blur-sm opacity-0 group-hover:opacity-50 animate-pulse"></div>
-                  </div>
-                  <span>Watch Journey</span>
-                </div>
-              </button>
-            </div>
+            
           </div>
 
           {/* Enhanced Stats with Animation */}
