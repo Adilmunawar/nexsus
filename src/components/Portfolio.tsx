@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect, useRef } from 'react';
-import { ExternalLink, Github, Zap, Sparkles, Star, TrendingUp, Eye, Code, Globe } from 'lucide-react';
+import { ExternalLink, Github, Zap, Sparkles, Star, TrendingUp, Eye, Code, Globe, Heart } from 'lucide-react';
 
 const Portfolio = () => {
   const [filter, setFilter] = useState('All');
