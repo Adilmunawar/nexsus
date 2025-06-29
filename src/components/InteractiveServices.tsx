@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { 
   Code2, 
@@ -25,60 +24,54 @@ const InteractiveServices = () => {
       subtitle: "Next-Gen Web Solutions",
       description: "Revolutionary full-stack applications using cutting-edge technologies like React, Node.js, and cloud-native architectures that scale seamlessly.",
       icon: Code2,
-      gradient: "from-blue-500 via-cyan-500 to-blue-600",
       features: ["React Ecosystem", "Cloud Architecture", "Microservices", "Real-time Systems"],
       stats: { projects: "25+", satisfaction: "100%", performance: "99.9%" },
-      color: "blue"
+      color: "white"
     },
     {
       title: "UI/UX Design Mastery",
       subtitle: "Pixel-Perfect Experiences",
       description: "Immersive digital experiences that blend aesthetics with functionality, creating memorable user journeys that convert and engage.",
       icon: Palette,
-      gradient: "from-purple-500 via-pink-500 to-purple-600",
       features: ["Design Systems", "User Psychology", "Motion Design", "Accessibility"],
       stats: { projects: "30+", satisfaction: "100%", performance: "95%" },
-      color: "purple"
+      color: "white"
     },
     {
       title: "Backend Engineering",
       subtitle: "Scalable Infrastructure",
       description: "Robust, high-performance backend systems with advanced security protocols and enterprise-grade scalability for mission-critical applications.",
       icon: Database,
-      gradient: "from-green-500 via-emerald-500 to-green-600",
       features: ["API Architecture", "Database Optimization", "Security Protocols", "Performance Tuning"],
       stats: { projects: "20+", satisfaction: "100%", performance: "99.8%" },
-      color: "green"
+      color: "white"
     },
     {
       title: "E-commerce Platforms",
-      subtitle: "Revenue-Driven Solutions",
+      subtitle: "Commerce Solutions", 
       description: "Advanced e-commerce ecosystems with AI-powered recommendations, real-time analytics, and conversion optimization strategies.",
       icon: ShoppingCart,
-      gradient: "from-orange-500 via-red-500 to-orange-600",
       features: ["Payment Gateways", "Inventory Systems", "Analytics Dashboard", "Mobile Commerce"],
       stats: { projects: "15+", satisfaction: "100%", performance: "98%" },
-      color: "orange"
+      color: "white"
     },
     {
       title: "Enterprise Solutions",
       subtitle: "Corporate Innovation",
       description: "Comprehensive enterprise systems including HRMS, CRM, and custom business applications tailored for operational excellence.",
       icon: Users,
-      gradient: "from-indigo-500 via-purple-500 to-indigo-600",
       features: ["System Integration", "Workflow Automation", "Data Analytics", "Security Compliance"],
       stats: { projects: "12+", satisfaction: "100%", performance: "99%" },
-      color: "indigo"
+      color: "white"
     },
     {
-      title: "AI & Blockchain",
-      subtitle: "Future Technologies",
-      description: "Cutting-edge AI implementations and blockchain solutions that revolutionize business processes and create competitive advantages.",
+      title: "SaaS Development",
+      subtitle: "Cloud Technologies",
+      description: "Modern SaaS implementations and cloud solutions that revolutionize business processes and create competitive advantages.",
       icon: Cpu,
-      gradient: "from-cyan-500 via-blue-500 to-cyan-600",
-      features: ["Machine Learning", "Smart Contracts", "Data Science", "Predictive Analytics"],
+      features: ["Cloud Native", "Multi-tenant", "Data Science", "Predictive Analytics"],
       stats: { projects: "8+", satisfaction: "100%", performance: "97%" },
-      color: "cyan"
+      color: "white"
     }
   ];
 
@@ -129,35 +122,42 @@ const InteractiveServices = () => {
   return (
     <section 
       ref={containerRef}
-      className="py-32 px-6 relative overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900"
+      className="py-32 px-6 relative overflow-hidden bg-black"
     >
-      {/* Dynamic Background */}
+      {/* Dark Animated Background */}
       <div className="absolute inset-0">
-        <div 
-          className="absolute w-96 h-96 bg-gradient-radial from-blue-500/20 to-transparent rounded-full blur-3xl transition-all duration-1000"
-          style={{
-            left: mousePosition.x - 192,
-            top: mousePosition.y - 192,
-          }}
-        />
-        <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-conic from-purple-500/10 to-transparent rounded-full blur-2xl animate-spin-slow"></div>
-        <div className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-conic from-cyan-500/10 to-transparent rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-black to-gray-900"></div>
+        
+        {/* Subtle Moving Elements */}
+        <div className="absolute top-20 right-20 w-72 h-72 border border-gray-800 rounded-full opacity-10 animate-spin-slow"></div>
+        <div className="absolute bottom-20 left-20 w-64 h-64 border border-gray-700 opacity-5 animate-pulse"></div>
+        
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div 
+            className="w-full h-full"
+            style={{
+              backgroundImage: 'radial-gradient(circle, #374151 1px, transparent 1px)',
+              backgroundSize: '50px 50px'
+            }}
+          />
+        </div>
       </div>
       
       <div className="max-w-8xl mx-auto relative z-10">
         {/* Section Header */}
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           <div className="flex items-center justify-center mb-6">
-            <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent flex-1 max-w-32"></div>
-            <Sparkles className="w-8 h-8 text-blue-400 mx-4 animate-pulse" />
-            <div className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent flex-1 max-w-32"></div>
+            <div className="h-px bg-gray-700 flex-1 max-w-32"></div>
+            <Sparkles className="w-8 h-8 text-white mx-4 animate-pulse" />
+            <div className="h-px bg-gray-700 flex-1 max-w-32"></div>
           </div>
           
-          <h2 className="text-6xl md:text-7xl font-black mb-8">
-            Our <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent animate-gradient-x">Expertise</span>
+          <h2 className="text-6xl md:text-7xl font-black mb-8 text-white">
+            Our <span className="text-gray-300">Expertise</span>
           </h2>
           
-          <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed font-light">
             Revolutionary digital solutions crafted with precision, innovation, and unmatched technical excellence
           </p>
         </div>
@@ -175,35 +175,31 @@ const InteractiveServices = () => {
                 }`}
                 onClick={() => setActiveService(index)}
               >
-                <div className={`relative p-6 rounded-2xl border transition-all duration-500 ${
+                <div className={`relative p-6 rounded-2xl border-2 transition-all duration-500 ${
                   activeService === index
-                    ? `bg-gradient-to-r ${service.gradient} shadow-2xl border-white/20`
-                    : 'bg-gray-900/50 border-gray-800/50 hover:bg-gray-800/70 hover:border-gray-700'
+                    ? 'bg-gray-900 border-gray-600 shadow-2xl'
+                    : 'bg-gray-950/50 border-gray-800 hover:bg-gray-900/70 hover:border-gray-700'
                 }`}>
                   
-                  {activeService === index && (
-                    <div className="absolute inset-0 bg-white/10 rounded-2xl blur-sm"></div>
-                  )}
-                  
                   <div className="relative flex items-center space-x-4">
-                    <div className={`w-16 h-16 rounded-xl flex items-center justify-center transition-all duration-500 ${
+                    <div className={`w-16 h-16 rounded-xl flex items-center justify-center transition-all duration-500 border-2 ${
                       activeService === index 
-                        ? 'bg-white/20 shadow-lg' 
-                        : `bg-gradient-to-r ${service.gradient}`
+                        ? 'bg-white text-black border-white shadow-lg' 
+                        : 'bg-gray-800 text-white border-gray-700'
                     }`}>
                       <service.icon className={`w-8 h-8 transition-all duration-500 ${
-                        activeService === index ? 'text-white scale-110' : 'text-white'
+                        activeService === index ? 'scale-110' : ''
                       }`} />
                     </div>
                     
                     <div className="flex-1">
                       <h3 className={`text-xl font-bold transition-all duration-300 ${
-                        activeService === index ? 'text-white' : 'text-gray-200'
+                        activeService === index ? 'text-white' : 'text-gray-300'
                       }`}>
                         {service.title}
                       </h3>
                       <p className={`text-sm transition-all duration-300 ${
-                        activeService === index ? 'text-white/80' : 'text-gray-400'
+                        activeService === index ? 'text-gray-300' : 'text-gray-500'
                       }`}>
                         {service.subtitle}
                       </p>
@@ -212,7 +208,7 @@ const InteractiveServices = () => {
                     <ArrowRight className={`w-5 h-5 transition-all duration-500 ${
                       activeService === index 
                         ? 'text-white translate-x-2' 
-                        : 'text-gray-400 group-hover:translate-x-1'
+                        : 'text-gray-500 group-hover:translate-x-1'
                     }`} />
                   </div>
                 </div>
@@ -222,15 +218,12 @@ const InteractiveServices = () => {
 
           {/* Active Service Details */}
           <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`}>
-            <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-800/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-10 shadow-2xl">
-              
-              {/* Animated Background */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${activeServiceData.gradient} opacity-5 rounded-3xl transition-all duration-500`}></div>
+            <div className="relative bg-gray-950/80 backdrop-blur-xl border-2 border-gray-800 rounded-3xl p-10 shadow-2xl">
               
               <div className="relative">
                 {/* Service Icon */}
-                <div className={`w-20 h-20 bg-gradient-to-r ${activeServiceData.gradient} rounded-2xl flex items-center justify-center mb-8 shadow-lg`}>
-                  <activeServiceData.icon className="w-10 h-10 text-white" />
+                <div className="w-20 h-20 bg-white text-black rounded-2xl flex items-center justify-center mb-8 shadow-lg">
+                  <activeServiceData.icon className="w-10 h-10" />
                 </div>
                 
                 {/* Title */}
@@ -248,9 +241,9 @@ const InteractiveServices = () => {
                   {activeServiceData.features.map((feature, index) => (
                     <div 
                       key={index}
-                      className="flex items-center space-x-3 p-3 bg-gray-800/50 rounded-xl border border-gray-700/50 hover:bg-gray-700/50 transition-all duration-300"
+                      className="flex items-center space-x-3 p-3 bg-gray-900/50 rounded-xl border border-gray-800 hover:bg-gray-800/50 transition-all duration-300"
                     >
-                      <div className={`w-2 h-2 bg-gradient-to-r ${activeServiceData.gradient} rounded-full`}></div>
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
                       <span className="text-gray-300 font-medium">{feature}</span>
                     </div>
                   ))}
@@ -258,28 +251,28 @@ const InteractiveServices = () => {
                 
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-4 mb-8">
-                  <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/30">
-                    <div className={`text-2xl font-bold bg-gradient-to-r ${activeServiceData.gradient} bg-clip-text text-transparent`}>
+                  <div className="text-center p-4 bg-gray-900/30 rounded-xl border border-gray-800">
+                    <div className="text-2xl font-bold text-white">
                       {activeServiceData.stats.projects}
                     </div>
                     <div className="text-gray-400 text-sm">Projects</div>
                   </div>
-                  <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/30">
-                    <div className={`text-2xl font-bold bg-gradient-to-r ${activeServiceData.gradient} bg-clip-text text-transparent`}>
+                  <div className="text-center p-4 bg-gray-900/30 rounded-xl border border-gray-800">
+                    <div className="text-2xl font-bold text-white">
                       {activeServiceData.stats.satisfaction}
                     </div>
                     <div className="text-gray-400 text-sm">Satisfaction</div>
                   </div>
-                  <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/30">
-                    <div className={`text-2xl font-bold bg-gradient-to-r ${activeServiceData.gradient} bg-clip-text text-transparent`}>
+                  <div className="text-center p-4 bg-gray-900/30 rounded-xl border border-gray-800">
+                    <div className="text-2xl font-bold text-white">
                       {activeServiceData.stats.performance}
                     </div>
                     <div className="text-gray-400 text-sm">Performance</div>
                   </div>
                 </div>
                 
-                {/* CTA Button */}
-                <button className={`w-full py-4 bg-gradient-to-r ${activeServiceData.gradient} rounded-xl font-bold text-white text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2`}>
+                {/* Custom CTA Button */}
+                <button className="w-full py-4 bg-black border-2 border-gray-700 rounded-xl font-bold text-white text-lg hover:border-gray-500 hover:bg-gray-900 transition-all duration-300 shadow-lg flex items-center justify-center space-x-2">
                   <span>Explore This Service</span>
                   <Zap className="w-5 h-5" />
                 </button>
