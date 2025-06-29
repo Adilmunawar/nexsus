@@ -1,308 +1,202 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+ 
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+ 
+    --primary: 222.1 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+ 
+    --muted: 216 34% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+ 
+    --primary: 222.1 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --ring: 217.2 32.6% 17.5%;
   }
-
+}
+ 
+@layer base {
   * {
     @apply border-border;
   }
-
   body {
-    @apply bg-background text-foreground font-sans;
-    background: radial-gradient(ellipse at top, #0f0f23 0%, #020617 50%, #000000 100%);
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-
-  html {
-    scroll-behavior: smooth;
+    @apply bg-background text-foreground;
   }
 }
 
-@layer utilities {
-  .text-gradient {
-    background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #06b6d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+/* Additional Advanced Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
   }
-
-  .glow-effect {
-    box-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
+  25% {
+    transform: translateY(-10px) rotate(5deg);
   }
-
-  /* Advanced Gradient Animations */
-  .animate-gradient-x {
-    background-size: 400% 400%;
-    animation: gradient-x 4s ease infinite;
+  50% {
+    transform: translateY(0px) rotate(0deg);
   }
-
-  .bg-300\% {
-    background-size: 300% 300%;
+  75% {
+    transform: translateY(-5px) rotate(-5deg);
   }
+}
 
-  /* Particle Effects */
-  .particle {
-    position: absolute;
-    background: radial-gradient(circle, rgba(96, 165, 250, 0.8) 0%, transparent 70%);
-    border-radius: 50%;
-    animation: float 6s ease-in-out infinite;
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
   }
-
-  /* Custom Animations */
-  @keyframes float {
-    0%, 100% { 
-      transform: translateY(0px) rotate(0deg); 
-      opacity: 0.7;
-    }
-    50% { 
-      transform: translateY(-30px) rotate(180deg); 
-      opacity: 1;
-    }
+  to {
+    transform: rotate(360deg);
   }
+}
 
-  @keyframes gradient-x {
-    0%, 100% { 
-      background-position: 0% 50%; 
-    }
-    50% { 
-      background-position: 100% 50%; 
-    }
+@keyframes gradient-x {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
   }
-
-  @keyframes glow {
-    0%, 100% {
-      text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
-    }
-    50% {
-      text-shadow: 0 0 30px rgba(168, 85, 247, 0.8), 0 0 40px rgba(6, 182, 212, 0.6);
-    }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
   }
+}
 
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(96, 165, 250, 0.5), 0 0 40px rgba(168, 85, 247, 0.3);
   }
-
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  50% {
+    text-shadow: 0 0 30px rgba(96, 165, 250, 0.8), 0 0 60px rgba(168, 85, 247, 0.5);
   }
+}
 
-  @keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+/* Animation Classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-gradient-x {
+  animation: gradient-x 4s ease infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Utility Classes */
+.bg-300% {
+  background-size: 300% 300%;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #60a5fa, #a855f7, #06b6d4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Enhanced Blur Effects */
+.backdrop-blur-3xl {
+  backdrop-filter: blur(64px);
+}
+
+/* Advanced Gradient Backgrounds */
+.bg-gradient-conic {
+  background: conic-gradient(var(--tw-gradient-stops));
+}
+
+.bg-gradient-radial {
+  background: radial-gradient(var(--tw-gradient-stops));
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #60a5fa, #a855f7);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+}
+
+/* Responsive Font Sizing */
+@media (max-width: 640px) {
+  .text-9xl {
+    font-size: 4rem;
+    line-height: 1;
   }
-
-  @keyframes spin-slow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+  
+  .text-8xl {
+    font-size: 3rem;
+    line-height: 1;
   }
-
-  @keyframes scale-in {
-    from {
-      transform: scale(0.9);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-
-  /* Animation Classes */
-  .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-
-  .animate-slide-in-left {
-    animation: slideInLeft 0.8s ease-out forwards;
-  }
-
-  .animate-spin-slow {
-    animation: spin-slow 8s linear infinite;
-  }
-
-  .animate-scale-in {
-    animation: scale-in 0.5s ease-out forwards;
-  }
-
-  /* Interactive Effects */
-  .hover-scale {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .hover-scale:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  }
-
-  .shimmer {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .shimmer::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    animation: shimmer 2s infinite;
-  }
-
-  /* Advanced Gradients */
-  .bg-gradient-radial {
-    background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
-  }
-
-  .bg-gradient-conic {
-    background: conic-gradient(var(--tw-gradient-stops));
-  }
-
-  /* Glass Morphism */
-  .glass {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  /* Neon Effects */
-  .neon-glow {
-    box-shadow: 
-      0 0 10px currentColor,
-      0 0 20px currentColor,
-      0 0 40px currentColor;
-  }
-
-  /* Custom Scrollbar */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: rgba(15, 15, 35, 0.5);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #60a5fa, #a855f7);
-    border-radius: 4px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
-  }
-
-  /* Typography */
-  .font-futuristic {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    font-weight: 900;
-    letter-spacing: -0.02em;
-  }
-
-  /* Responsive Text */
-  @media (max-width: 640px) {
-    .text-responsive-xl {
-      font-size: 2.5rem;
-      line-height: 1.1;
-    }
-    .text-responsive-2xl {
-      font-size: 3rem;
-      line-height: 1.1;
-    }
-  }
-
-  @media (min-width: 641px) {
-    .text-responsive-xl {
-      font-size: 4rem;
-      line-height: 1.1;
-    }
-    .text-responsive-2xl {
-      font-size: 5rem;
-      line-height: 1.1;
-    }
-  }
-
-  /* Button Animations */
-  .btn-hover-effect {
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-
-  .btn-hover-effect::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s ease;
-  }
-
-  .btn-hover-effect:hover::before {
-    left: 100%;
-  }
-
-  /* Card Animations */
-  .card-hover {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .card-hover:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
-  }
-
-  /* Pulse Animation for Icons */
-  .icon-pulse {
-    animation: pulse-glow 2s ease-in-out infinite alternate;
-  }
-
-  @keyframes pulse-glow {
-    0% {
-      box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.4);
-    }
-    100% {
-      box-shadow: 0 0 20px 10px rgba(96, 165, 250, 0);
-    }
+  
+  .text-7xl {
+    font-size: 2.5rem;
+    line-height: 1;
   }
 }

@@ -1,10 +1,10 @@
 
 import React from 'react';
-import Navigation from '../components/Navigation';
+import AdvancedNavigation from '../components/AdvancedNavigation';
 import AdvancedHero from '../components/AdvancedHero';
 import InteractiveServices from '../components/InteractiveServices';
 import Portfolio from '../components/Portfolio';
-import AdvancedTestimonials from '../components/AdvancedTestimonials';
+import TestimonialShowcase from '../components/TestimonialShowcase';
 import Team from '../components/Team';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
@@ -12,11 +12,11 @@ import Footer from '../components/Footer';
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navigation />
+      <AdvancedNavigation />
       <AdvancedHero />
       <InteractiveServices />
       <Portfolio />
-      <AdvancedTestimonials />
+      <TestimonialShowcase />
       <Team />
       <Contact />
       <Footer />
