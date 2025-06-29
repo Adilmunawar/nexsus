@@ -11,14 +11,24 @@ import Footer from '../components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black text-foreground">
       <AdvancedNavigation />
       <AdvancedHero />
-      <InteractiveServices />
-      <Portfolio />
-      <TestimonialShowcase />
-      <Team />
-      <Contact />
+      <div id="services">
+        <InteractiveServices />
+      </div>
+      <div id="portfolio">
+        <Portfolio />
+      </div>
+      <div id="testimonials">
+        <TestimonialShowcase />
+      </div>
+      <div id="team">
+        <Team />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
       <Footer />
     </div>
   );

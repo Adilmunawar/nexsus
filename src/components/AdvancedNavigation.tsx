@@ -15,38 +15,47 @@ const AdvancedNavigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileOpen(false);
+    setActiveDropdown(null);
+  };
+
   const navItems = [
     { 
       name: 'Home', 
-      href: '#home',
+      id: 'home',
       icon: Sparkles
     },
     { 
       name: 'About', 
-      href: '#about',
+      id: 'about',
       icon: Globe,
       dropdown: [
-        { name: 'Our Story', href: '#story' },
-        { name: 'Mission & Vision', href: '#mission' },
-        { name: 'Awards', href: '#awards' }
+        { name: 'Our Story', id: 'story' },
+        { name: 'Mission & Vision', id: 'mission' },
+        { name: 'Awards', id: 'awards' }
       ]
     },
     { 
       name: 'Services', 
-      href: '#services',
+      id: 'services',
       icon: Zap,
       dropdown: [
-        { name: 'Web Development', href: '#web-dev' },
-        { name: 'Mobile Apps', href: '#mobile' },
-        { name: 'UI/UX Design', href: '#design' },
-        { name: 'E-commerce', href: '#ecommerce' },
-        { name: 'Digital Marketing', href: '#marketing' }
+        { name: 'Web Development', id: 'web-dev' },
+        { name: 'Mobile Apps', id: 'mobile' },
+        { name: 'UI/UX Design', id: 'design' },
+        { name: 'E-commerce', id: 'ecommerce' },
+        { name: 'Digital Marketing', id: 'marketing' }
       ]
     },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Team', href: '#team' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Portfolio', id: 'portfolio' },
+    { name: 'Team', id: 'team' },
+    { name: 'Testimonials', id: 'testimonials' },
+    { name: 'Contact', id: 'contact' }
   ];
 
   return (
@@ -60,7 +69,7 @@ const AdvancedNavigation = () => {
           <div className="flex items-center justify-between h-20">
             
             {/* Enhanced Logo */}
-            <div className="flex items-center space-x-4 group cursor-pointer">
+            <div className="flex items-center space-x-4 group cursor-pointer" onClick={() => scrollToSection('home')}>
               <div className="relative">
                 <img 
                   src="/lovable-uploads/e04a8557-a178-4b19-a946-2d6df66877cb.png" 
@@ -94,8 +103,8 @@ const AdvancedNavigation = () => {
                   onMouseEnter={() => item.dropdown && setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  <a
-                    href={item.href}
+                  <button
+                    onClick={() => scrollToSection(item.id)}
                     className="relative flex items-center space-x-2 px-6 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl group-hover:bg-gray-800/50 backdrop-blur-sm"
                     style={{
                       animationDelay: `${index * 0.1}s`
@@ -107,17 +116,17 @@ const AdvancedNavigation = () => {
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
                     )}
                     <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
-                  </a>
+                  </button>
                   
                   {/* Dropdown Menu */}
                   {item.dropdown && activeDropdown === item.name && (
                     <div className="absolute top-full left-0 mt-2 w-64 bg-gray-900/95 backdrop-blur-2xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-purple-500/20 overflow-hidden">
                       <div className="p-2">
                         {item.dropdown.map((dropItem, dropIndex) => (
-                          <a
+                          <button
                             key={dropItem.name}
-                            href={dropItem.href}
-                            className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-xl transition-all duration-300 group"
+                            onClick={() => scrollToSection(dropItem.id)}
+                            className="block w-full text-left px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-xl transition-all duration-300 group"
                             style={{
                               animationDelay: `${dropIndex * 0.05}s`
                             }}
@@ -126,7 +135,7 @@ const AdvancedNavigation = () => {
                               <span className="font-medium">{dropItem.name}</span>
                               <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
-                          </a>
+                          </button>
                         ))}
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 pointer-events-none"></div>
@@ -138,7 +147,10 @@ const AdvancedNavigation = () => {
 
             {/* CTA Button */}
             <div className="hidden md:flex items-center space-x-4">
-              <button className="group relative px-6 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 rounded-xl font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="group relative px-6 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 rounded-xl font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+              >
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative flex items-center space-x-2">
                   <Sparkles className="w-4 h-4" />
@@ -167,28 +179,26 @@ const AdvancedNavigation = () => {
             <div className="px-6 py-8 space-y-4">
               {navItems.map((item, index) => (
                 <div key={item.name}>
-                  <a
-                    href={item.href}
-                    onClick={() => setIsMobileOpen(false)}
-                    className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-xl transition-all duration-300 group"
+                  <button
+                    onClick={() => scrollToSection(item.id)}
+                    className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-xl transition-all duration-300 group w-full text-left"
                     style={{
                       animationDelay: `${index * 0.1}s`
                     }}
                   >
                     {item.icon && <item.icon className="w-5 h-5" />}
                     <span className="font-medium text-lg">{item.name}</span>
-                  </a>
+                  </button>
                   {item.dropdown && (
                     <div className="ml-8 mt-2 space-y-2">
                       {item.dropdown.map((dropItem) => (
-                        <a
+                        <button
                           key={dropItem.name}
-                          href={dropItem.href}
-                          onClick={() => setIsMobileOpen(false)}
-                          className="block px-4 py-2 text-gray-400 hover:text-white transition-colors duration-300"
+                          onClick={() => scrollToSection(dropItem.id)}
+                          className="block w-full text-left px-4 py-2 text-gray-400 hover:text-white transition-colors duration-300"
                         >
                           {dropItem.name}
-                        </a>
+                        </button>
                       ))}
                     </div>
                   )}
@@ -196,7 +206,10 @@ const AdvancedNavigation = () => {
               ))}
               
               <div className="pt-6 border-t border-gray-700/50">
-                <button className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl font-semibold text-white transition-all duration-300 hover:scale-105">
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl font-semibold text-white transition-all duration-300 hover:scale-105"
+                >
                   Start Your Project
                 </button>
               </div>
