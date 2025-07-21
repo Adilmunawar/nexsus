@@ -6,7 +6,6 @@ const Portfolio = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
-  
   const projects = [
     {
       id: 1,
@@ -167,8 +166,7 @@ const Portfolio = () => {
             </span>
             <br />
             <span className="text-white/90 text-4xl md:text-6xl">Portfolio</span>
-          </h2>
-          
+          </h2>    
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light mb-12">
             Showcasing <span className="text-gradient bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent font-semibold">cutting-edge web solutions</span> that drive business growth and user engagement
           </p>
