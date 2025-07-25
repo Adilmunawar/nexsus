@@ -3,7 +3,11 @@ import React from 'react';
 import AdvancedNavigation from '../components/AdvancedNavigation';
 import AdvancedHero from '../components/AdvancedHero';
 import InteractiveServices from '../components/InteractiveServices';
+import WorkflowSection from '../components/WorkflowSection';
+import IndustryDiversity from '../components/IndustryDiversity';
 import Portfolio from '../components/Portfolio';
+import GrowthBenefits from '../components/GrowthBenefits';
+import CompanyAdvantages from '../components/CompanyAdvantages';
 import TestimonialShowcase from '../components/TestimonialShowcase';
 import Team from '../components/Team';
 import Contact from '../components/Contact';
@@ -53,9 +57,13 @@ const Index = () => {
         <div id="services">
           <InteractiveServices />
         </div>
+        <WorkflowSection />
+        <IndustryDiversity />
         <div id="portfolio">
           <Portfolio />
         </div>
+        <GrowthBenefits />
+        <CompanyAdvantages />
         <div id="testimonials">
           <TestimonialShowcase />
         </div>
