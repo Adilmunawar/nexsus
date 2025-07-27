@@ -176,10 +176,10 @@ void main() {
       glowIntensity: { value: glowIntensity },
       opacity: { value: opacity },
       gridRotation: { value: gridRotation },
-      mouseInteraction: { value: mouseInteraction },
+      mouseInteraction: false,
       mousePosition: { value: [0.5, 0.5] },
       mouseInfluence: { value: 0 },
-      mouseInteractionRadius: { value: mouseInteractionRadius },
+      mouseInteractionRadius: 0.8,
     };
 
     uniformsRef.current = uniforms;
