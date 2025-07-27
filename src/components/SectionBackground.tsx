@@ -12,20 +12,9 @@ export const SectionBackground = ({
   className = '', 
   variant = 'transparent' 
 }: SectionBackgroundProps) => {
-  const getBackgroundClass = () => {
-    switch (variant) {
-      case 'semi-transparent':
-        return 'bg-background/80 backdrop-blur-sm';
-      case 'solid':
-        return 'bg-background';
-      case 'transparent':
-      default:
-        return 'bg-transparent';
-    }
-  };
-
+  // Always use transparent background for global background effect
   return (
-    <div className={`relative z-10 ${getBackgroundClass()} ${className}`}>
+    <div className={`relative z-10 bg-transparent ${className}`}>
       {children}
     </div>
   );

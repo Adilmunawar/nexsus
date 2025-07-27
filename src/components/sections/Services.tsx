@@ -55,7 +55,7 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <AnimatedSection className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
