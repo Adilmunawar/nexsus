@@ -1,5 +1,5 @@
 
 ## Project Screenshot
 
-![Nexsus App Screenshot](./public/readme-screenshot.png)
+![Nexsus App Screenshot](./assets/readme-screenshot.png)
 
