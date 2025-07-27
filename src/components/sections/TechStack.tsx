@@ -56,7 +56,7 @@ export const TechStack = () => {
   ];
 
   return (
-    <section id="tech-stack" className="py-20 bg-card">
+    <section id="tech-stack" className="py-20">
       <div className="container mx-auto px-4">
         <AnimatedSection className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -74,14 +74,14 @@ export const TechStack = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative"
+            className=""
           >
             <img 
               src="/nexsus-uploads/f09fe3fc-ec6d-41c9-9b6e-9b9310b6693f.png" 
               alt="Modern Technology Infrastructure" 
               className="w-full h-auto rounded-lg shadow-professional"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-card/50 to-transparent rounded-lg"></div>
+            {/* Removed overlay for global background */}
           </motion.div>
 
           <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
@@ -97,7 +97,7 @@ export const TechStack = () => {
         </div>
 
         <AnimatedSection className="mt-16">
-          <div className="bg-gradient-card rounded-2xl p-8 border border-border/50">
+          <div className="rounded-2xl p-8 border border-border/50">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
                 <motion.h3 

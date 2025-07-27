@@ -58,7 +58,7 @@ export const DomainExpertise = () => {
               transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-gradient-card rounded-xl p-6 border border-border/50 hover:border-primary/50 transition-all duration-300 text-center hover:shadow-glow group flex flex-col items-center justify-center min-h-[140px]"
+              className="rounded-xl p-6 border border-border/50 hover:border-primary/50 transition-all duration-300 text-center hover:shadow-glow group flex flex-col items-center justify-center min-h-[140px]"
             >
               <div className="text-primary mb-4 group-hover:animate-float flex items-center justify-center">
                 {domain.icon}
