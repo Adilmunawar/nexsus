@@ -77,7 +77,7 @@ export const TechStack = () => {
             className="relative"
           >
             <img 
-              src="/lovable-uploads/f09fe3fc-ec6d-41c9-9b6e-9b9310b6693f.png" 
+              src="/nexsus-uploads/f09fe3fc-ec6d-41c9-9b6e-9b9310b6693f.png" 
               alt="Modern Technology Infrastructure" 
               className="w-full h-auto rounded-lg shadow-professional"
             />

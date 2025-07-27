@@ -11,8 +11,8 @@ export const Management = () => {
       company: 'Nexsus Orbits',
       location: 'Lahore, Punjab, Pakistan',
       linkedin: 'https://www.linkedin.com/in/adilmunawar/',
-      image: '/lovable-uploads/4cd54bce-feeb-4e64-800a-b3e34c4ec757.png',
-      coverImage: '/lovable-uploads/fe759b26-ccb4-448b-a95f-f45bb2b90e0e.png',
+      image: '/nexsus-uploads/4cd54bce-feeb-4e64-800a-b3e34c4ec757.png',
+      coverImage: '/nexsus-uploads/fe759b26-ccb4-448b-a95f-f45bb2b90e0e.png',
       description: 'Transforming ideas into digital reality with innovative solutions.',
       skills: ['JavaScript', 'React', 'Node.js', 'SQL', 'Project Management'],
       experience: '3+ Years'
@@ -23,8 +23,8 @@ export const Management = () => {
       company: 'Nexsus Orbits Pakistan',
       location: 'Lahore, Punjab, Pakistan',
       linkedin: 'https://www.linkedin.com/in/zoyyaali/',
-      image: '/lovable-uploads/5ff4a69b-2320-4b74-aa83-c6fb050e643e.png',
-      coverImage: '/lovable-uploads/a0cb972d-4d5c-4e0a-a35d-cf053ef2c014.png',
+      image: '/nexsus-uploads/5ff4a69b-2320-4b74-aa83-c6fb050e643e.png',
+      coverImage: '/nexsus-uploads/a0cb972d-4d5c-4e0a-a35d-cf053ef2c014.png',
       description: 'We don\'t develop programs. We build great systems.',
       skills: ['Web Development', 'System Architecture', 'Frontend', 'Backend'],
       experience: '3+ Years'

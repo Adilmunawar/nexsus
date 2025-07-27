@@ -34,8 +34,8 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="mb-8 flex justify-center"
           >
-            <img 
-              src="/lovable-uploads/79e1773d-e860-4ec7-a4e2-b55f830c7746.png" 
+               <img 
+                 src="/nexsus-uploads/79e1773d-e860-4ec7-a4e2-b55f830c7746.png" 
               alt="Nexsus Orbits" 
               className="h-20 w-auto"
             />

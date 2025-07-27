@@ -51,7 +51,7 @@ export const Infrastructure = () => {
           >
             <div className="relative rounded-2xl overflow-hidden">
               <img 
-                src="/lovable-uploads/e8531b72-e97a-46c9-9dae-39b12a5d4e08.png" 
+                src="/nexsus-uploads/e8531b72-e97a-46c9-9dae-39b12a5d4e08.png" 
                 alt="Advanced Infrastructure" 
                 className="w-full h-auto"
               />

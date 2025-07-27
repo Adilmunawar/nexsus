@@ -135,7 +135,7 @@ const AdvancedHero = () => {
             <div className="relative inline-block group cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-3xl opacity-60 group-hover:opacity-90 transition-opacity duration-500 animate-pulse"></div>
               <img 
-                src="/lovable-uploads/e04a8557-a178-4b19-a946-2d6df66877cb.png" 
+                src="/nexsus-uploads/e04a8557-a178-4b19-a946-2d6df66877cb.png" 
                 alt="Nexsus Orbits Logo" 
                 className="relative w-32 h-32 md:w-48 md:h-48 rounded-full shadow-2xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-700 border-4 border-white/20 backdrop-blur-sm" 
                 style={{

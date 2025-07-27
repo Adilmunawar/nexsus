@@ -72,7 +72,7 @@ const AdvancedNavigation = () => {
             <div className="flex items-center space-x-4 group cursor-pointer" onClick={() => scrollToSection('home')}>
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/e04a8557-a178-4b19-a946-2d6df66877cb.png" 
+                  src="/nexsus-uploads/e04a8557-a178-4b19-a946-2d6df66877cb.png" 
                   alt="Nexsus Orbits Logo" 
                   className="w-12 h-12 rounded-full transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 filter brightness-110"
                 />
