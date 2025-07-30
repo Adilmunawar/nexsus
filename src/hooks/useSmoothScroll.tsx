@@ -42,9 +42,7 @@ export const useSmoothScroll = () => {
         }
       }
     };
-
     document.addEventListener('click', handleAnchorClick);
-
     return () => {
       document.removeEventListener('click', handleAnchorClick);
       lenis.destroy();
